@@ -5,7 +5,7 @@ defmodule EventClient do
                         "event_name" => event_name, "payload" => payload}},
                       %{},
                       Client.Encoders.JSON,
-                      Client.Decoders.JSON,
+                      Client.Decoders.NilDecoder,
                       &Client.post(&1, &2, &3))
   end
 
